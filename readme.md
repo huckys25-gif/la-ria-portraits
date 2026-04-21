@@ -23,3 +23,4 @@ Rezervace je vložená jako iframe. Aktuální odkaz:
 https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0hzIIpsNAK95qChJieGLKBTE1AIIfTlnyc5KC4Xr9GIqOXyMr2cXBa8KkCDZuQPoX-g3AZeFZJ
 
 Změna odkazu: `app/rezervace/page.tsx` → proměnná `BOOKING_URL`.
+redeploy logo fix
