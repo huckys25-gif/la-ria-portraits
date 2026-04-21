@@ -15,9 +15,7 @@ export default function Header() {
                 height={40}
                 priority
               />
-              <span>
-                <small>Praha</small>
-              </span>
+              <span style={{ fontSize: 12, color: "#666" }}>Praha</span>
             </div>
           </Link>
 
@@ -35,3 +33,4 @@ export default function Header() {
     </header>
   );
 }
+``
