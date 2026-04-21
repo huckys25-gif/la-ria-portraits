@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 import Link from 'next/link';
 
 export default function Header(){
@@ -7,13 +7,19 @@ export default function Header(){
       <div className="container">
         <div className="nav">
           <Link href="/" className="brand" aria-label="La Ria Portraits">
-            <span style={{display:'inline-flex',alignItems:'center',gap:10}}>
-              <span style={{width:34,height:34,borderRadius:12,background:'linear-gradient(135deg,#111,#333)',display:'inline-flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:800}}>LR</span>
-              <span>
-                La Ria Portraits
-                <small>Praha</small>
-              </span>
-            </span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+  <Image
+    src="/logo.png"
+    alt="La Ria Portraits"
+    width={140}
+    height={40}
+    priority
+    style={{ height: "auto", width: "auto" }}
+  />
+  <span>
+    <small>Praha</small>
+  </span>
+</span>
           </Link>
 
           <nav className="menu" aria-label="Hlavní menu">
