@@ -3,22 +3,19 @@ const portfolioItems = [
     title: "Rodinné focení",
     subtitle: "Přirozené momenty plné světla a blízkosti.",
     image: "/images/family.jpg",
-    bg: "card-gradient card-gradient-emerald",
-    accent: "accent-emerald",
+    tone: "tone-sage",
   },
   {
     title: "Svatby",
     subtitle: "Elegantní reportáž z vašeho dne bez přehnané stylizace.",
     image: "/images/wedding.jpg",
-    bg: "card-gradient card-gradient-orange",
-    accent: "accent-orange",
+    tone: "tone-terra",
   },
   {
     title: "Dětské focení",
     subtitle: "Jemné, hravé a živé fotky s přirozenou atmosférou.",
     image: "/images/kids.jpg",
-    bg: "card-gradient card-gradient-sand",
-    accent: "accent-sand",
+    tone: "tone-sand",
   },
 ];
 
@@ -27,23 +24,20 @@ const pricing = [
     name: "Mini",
     price: "2 900 Kč",
     features: ["30 minut focení", "10 upravených fotografií", "Online galerie"],
-    border: "border-emerald",
-    button: "btn-emerald",
+    accent: "accent-sage",
   },
   {
     name: "Standard",
     price: "4 900 Kč",
     features: ["60 minut focení", "30 upravených fotografií", "Online galerie + tisk"],
-    border: "border-orange featured",
-    button: "btn-orange",
+    accent: "accent-terra",
     featured: true,
   },
   {
     name: "Premium",
     price: "7 900 Kč",
     features: ["90 minut focení", "60 upravených fotografií", "Fotokniha + online galerie"],
-    border: "border-slate",
-    button: "btn-dark",
+    accent: "accent-dark",
   },
 ];
 
@@ -62,74 +56,17 @@ const testimonials = [
   },
 ];
 
-const palette = [
-  { hex: "#A9C5B3", label: "Šalvějová" },
-  { hex: "#D39B72", label: "Terakota" },
-  { hex: "#111111", label: "Černá" },
-  { hex: "#F9F4EC", label: "Krémová" },
-];
-
-function IconArrowRight() {
+function ArrowRight() {
   return (
-    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-sm">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-sm" aria-hidden="true">
       <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function IconSparkles() {
+function Star() {
   return (
-    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-sm">
-      <path d="M10 2L11.8 7.2L17 9L11.8 10.8L10 16L8.2 10.8L3 9L8.2 7.2L10 2Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function IconCamera() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-md">
-      <path d="M4 8.5C4 7.67 4.67 7 5.5 7H7.3C7.63 7 7.93 6.81 8.07 6.51L8.7 5.19C8.94 4.68 9.45 4.35 10.01 4.35H13.99C14.55 4.35 15.06 4.68 15.3 5.19L15.93 6.51C16.07 6.81 16.37 7 16.7 7H18.5C19.33 7 20 7.67 20 8.5V17.5C20 18.33 19.33 19 18.5 19H5.5C4.67 19 4 18.33 4 17.5V8.5Z" stroke="currentColor" strokeWidth="1.7"/>
-      <circle cx="12" cy="13" r="3.5" stroke="currentColor" strokeWidth="1.7"/>
-    </svg>
-  );
-}
-
-function IconHeart() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-md">
-      <path d="M12 20C11.7 20 11.39 19.89 11.15 19.67C7.31 16.18 5 13.98 5 10.95C5 8.6 6.79 6.8 9.15 6.8C10.49 6.8 11.78 7.42 12.6 8.39C13.42 7.42 14.71 6.8 16.05 6.8C18.41 6.8 20.2 8.6 20.2 10.95C20.2 13.98 17.89 16.18 14.05 19.67C13.81 19.89 13.5 20 13.2 20H12Z" stroke="currentColor" strokeWidth="1.7"/>
-    </svg>
-  );
-}
-
-function IconMail() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-md">
-      <path d="M4 7.5C4 6.67 4.67 6 5.5 6H18.5C19.33 6 20 6.67 20 7.5V16.5C20 17.33 19.33 18 18.5 18H5.5C4.67 18 4 17.33 4 16.5V7.5Z" stroke="currentColor" strokeWidth="1.7"/>
-      <path d="M5 8L12 13L19 8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  );
-}
-
-function IconPhone() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-md">
-      <path d="M6.7 4.5H9.2C9.57 4.5 9.9 4.76 9.98 5.12L10.55 7.8C10.61 8.08 10.53 8.38 10.33 8.59L8.85 10.12C9.71 11.83 11.17 13.29 12.88 14.15L14.41 12.67C14.62 12.47 14.92 12.39 15.2 12.45L17.88 13.02C18.24 13.1 18.5 13.43 18.5 13.8V16.3C18.5 16.96 18.01 17.52 17.35 17.6C16.91 17.66 16.47 17.69 16.02 17.69C9.76 17.69 6.31 14.24 6.31 7.98C6.31 7.53 6.34 7.09 6.4 6.65C6.48 5.99 7.04 5.5 7.7 5.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  );
-}
-
-function IconMenu() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-md">
-      <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function IconStar() {
-  return (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="icon-sm fill-current">
+    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="icon-sm fill-current" aria-hidden="true">
       <path d="M10 1.9L12.5 7L18 7.8L14 11.7L15 17.1L10 14.4L5 17.1L6 11.7L2 7.8L7.5 7L10 1.9Z" />
     </svg>
   );
@@ -138,202 +75,177 @@ function IconStar() {
 export default function Page() {
   return (
     <main className="site-shell">
-      <div className="bg-orb orb-emerald" />
-      <div className="bg-orb orb-orange" />
-      <div className="bg-orb orb-slate" />
-
       <header className="topbar">
         <div className="wrapper topbar-inner">
-          <div>
-            <div className="brand-name">La Ria</div>
-            <div className="brand-sub">Portraits • Praha</div>
-          </div>
+          <a href="#home" className="brand-block" aria-label="La Ria Portraits - Domů">
+            <img src="/logo.png" alt="La Ria Portraits" className="brand-logo" />
+          </a>
 
-          <nav className="topnav">
-            <a href="#home" className="nav-cream active-link">Domů</a>
-            <a href="#portfolio" className="nav-cream">Portfolio</a>
-            <a href="#about" className="nav-cream">O mně</a>
-            <a href="#pricing" className="nav-cream">Ceník</a>
-            <a href="#contact" className="nav-cream">Kontakt</a>
+          <nav className="topnav" aria-label="Hlavní navigace">
+            <a href="#home">Domů</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">O mně</a>
+            <a href="#pricing">Ceník</a>
+            <a href="#contact">Kontakt</a>
           </nav>
 
-          <div className="topbar-actions">
-            <button className="btn-pill btn-outline-gold desktop-only">Rezervovat termín</button>
-            <button className="icon-button mobile-only" aria-label="Menu">
-              <IconMenu />
-            </button>
-          </div>
+          <a href="#contact" className="topbar-cta">
+            Rezervovat termín
+          </a>
         </div>
       </header>
 
-      <section id="home" className="hero-section wrapper">
-        <div className="hero-copy-col">
-          <div className="soft-badge dark-badge">
-            <span className="text-gold"><IconSparkles /></span>
-            Lifestyle & business focení pro jednotlivce i firmy v Praze
+      <section id="home" className="hero">
+        <div className="wrapper hero-grid">
+          <div className="hero-copy-panel">
+            <p className="eyebrow">La Ria Portraits | Praha</p>
+            <h1>Lifestyle & business focení pro jednotlivce i firmy v Praze.</h1>
+            <p className="hero-copy">
+              Moderní, čistý a elegantní web pro fotografku, která chce působit prémiově,
+              ale stále lidsky a přirozeně. Méně růžové, více harmonie, černé a teplých neutrálních tónů.
+            </p>
+
+            <div className="hero-actions">
+              <a href="#portfolio" className="btn btn-primary">
+                Prohlédnout portfolio
+                <ArrowRight />
+              </a>
+              <a href="#pricing" className="btn btn-secondary">
+                Zobrazit ceník
+              </a>
+            </div>
           </div>
 
-          <h1 className="hero-title dark-title">
-            Moderní fotografie
-            <span className="text-cream">s radostí a elegancí</span>
-          </h1>
-
-          <p className="hero-text dark-text">
-            Pestřejší vizuální styl, více černé a bílé, luxusnější kontrast a stále jemné
-            přírodní akcenty. Přehledný web, který působí prémiově a přitom lidsky.
-          </p>
-
-          <div className="hero-actions">
-            <a href="#portfolio" className="btn-pill btn-outline-light">
-              Prohlédnout portfolio
-            </a>
-            <a href="#pricing" className="btn-pill btn-transparent-light">
-              Zjistit více
-            </a>
-          </div>
-
-          <div className="palette-row">
-            {palette.map((color) => (
-              <div key={color.hex} className="palette-chip dark-chip">
-                <span className="palette-dot" style={{ backgroundColor: color.hex }} />
-                <span>{color.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="hero-visual-col">
-          <div className="hero-card luxury-card">
-            <img src="/images/hero-main.jpg" alt="Hlavní fotografie" className="hero-main-image" />
-            <div className="hero-floating-note light-note">
-              <div className="floating-kicker dark-kicker">La Ria Portraits | Praha</div>
-              <div className="floating-title dark-floating-title">Lifestyle & business focení</div>
+          <div className="hero-image-panel">
+            <img src="/images/hero-main.jpg" alt="Hlavní portfolio fotografie" className="hero-image" />
+            <div className="hero-note">
+              <span className="hero-note-kicker">Rezervujte si termín online.</span>
+              <span className="hero-note-text">Soft luxury editorial</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="section wrapper centered-section bright-section">
-        <div className="portfolio-grid luxury-grid">
+      <section id="portfolio" className="section section-cream">
+        <div className="wrapper section-head">
+          <p className="eyebrow dark">Portfolio</p>
+          <h2>Citlivé portréty, přirozené rodiny a čistý vizuální styl.</h2>
+          <p className="section-copy">
+            Tato homepage je postavená jako jeden elegantní celek. Fotografie jsou hlavním nosičem dojmu,
+            design je podporuje a nepřebíjí.
+          </p>
+        </div>
+
+        <div className="wrapper portfolio-grid">
           {portfolioItems.map((item) => (
-            <article key={item.title} className={item.bg}>
+            <article key={item.title} className={`portfolio-card ${item.tone}`}>
               <div className="portfolio-image-wrap">
                 <img src={item.image} alt={item.title} className="portfolio-image" />
               </div>
-              <div className="portfolio-content centered-card-text">
+              <div className="portfolio-card-content">
                 <h3>{item.title}</h3>
                 <p>{item.subtitle}</p>
-                <button className={"btn-pill dark-card-btn " + item.accent}>Zobrazit více</button>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="pricing" className="section wrapper pricing-white-section">
-        <div className="section-head-left">
-          <h2 className="section-title serif-dark">Balíčky focení</h2>
-        </div>
-
-        <div className="pricing-grid luxury-pricing-grid">
-          {pricing.map((item) => (
-            <div key={item.name} className={"price-card luxury-price-card " + item.border}>
-              {item.featured && <div className="featured-ribbon">Nejčastější volba</div>}
-              <h3>{item.name}</h3>
-              <div className="price">{item.price}</div>
-              <ul>
-                {item.features.map((feature) => (
-                  <li key={feature}>
-                    <span className="bullet" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <button className={"cta-button " + item.button}>Vybrat balíček</button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section wrapper testimonials-clean">
-        <h2 className="section-title serif-dark section-head-left">Co říkají klienti</h2>
-        <div className="testimonials-grid clean-testimonials">
-          {testimonials.map((item) => (
-            <div key={item.author} className="testimonial-simple">
-              <p>„{item.text}“</p>
-              <div className="author">— {item.author}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="about" className="about-band luxury-about-band">
+      <section id="about" className="section section-white">
         <div className="wrapper about-grid">
-          <div>
-            <div className="section-kicker dark-kicker">O mně</div>
-            <h2 className="section-title left serif-dark">Více černé, více bílé, stále jemný charakter</h2>
-            <p className="about-text">
-              Tento směr je luxusnější, čistší a výraznější. Funguje skvěle pro fotografku, která
-              nechce působit přeslazeně, ale pořád chce mít web živý, příjemný a lidský.
+          <div className="about-copy">
+            <p className="eyebrow dark">O mně</p>
+            <h2>Elegantní styl bez přeslazenosti.</h2>
+            <p>
+              Web působí luxusněji díky lepší rovnováze mezi tmavou horní částí a teplým světlým základem.
+              Fotografie zůstávají v centru pozornosti a sekce na sebe navazují přirozeněji.
             </p>
-            <div className="features-grid">
-              {[
-                { label: "Jemné efekty", icon: <IconSparkles />, style: "feature-emerald" },
-                { label: "Luxusní kontrast", icon: <IconCamera />, style: "feature-orange" },
-                { label: "Přehlednost", icon: <IconHeart />, style: "feature-slate" },
-              ].map((item) => (
-                <div key={item.label} className={"feature-card " + item.style}>
-                  <div className="feature-icon">{item.icon}</div>
-                  <div className="feature-label">{item.label}</div>
-                </div>
-              ))}
-            </div>
+            <p>
+              Tenhle koncept je připravený pro reálné portfolio manželky a lze ho dál jednoduše doplnit
+              o konkrétní texty, ceník nebo propojení na rezervace.
+            </p>
           </div>
 
-          <div className="tilt-gallery less-tilt-gallery">
-            <div className="gallery-card card-left">
+          <div className="about-images">
+            <div className="about-card about-card-main">
               <img src="/images/about-1.jpg" alt="Ukázka fotografie 1" />
             </div>
-            <div className="gallery-card card-right small-tilt">
+            <div className="about-card about-card-offset">
               <img src="/images/about-2.jpg" alt="Ukázka fotografie 2" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="contact-strip luxury-contact-strip">
-        <div className="wrapper contact-strip-grid">
+      <section id="pricing" className="section section-ivory">
+        <div className="wrapper section-head">
+          <p className="eyebrow dark">Ceník</p>
+          <h2>Balíčky focení</h2>
+        </div>
+
+        <div className="wrapper pricing-grid">
+          {pricing.map((item) => (
+            <article key={item.name} className={`pricing-card ${item.accent} ${item.featured ? "featured-card" : ""}`}>
+              {item.featured && <div className="featured-badge">Nejoblíbenější volba</div>}
+              <h3>{item.name}</h3>
+              <div className="price">{item.price}</div>
+              <ul>
+                {item.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
+              <a href="#contact" className="price-btn">
+                Vybrat balíček
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-white testimonials-section">
+        <div className="wrapper section-head align-left">
+          <p className="eyebrow dark">Reference</p>
+          <h2>Co říkají klienti</h2>
+        </div>
+
+        <div className="wrapper testimonials-grid">
+          {testimonials.map((item) => (
+            <article key={item.author} className="testimonial-card">
+              <div className="stars-row">
+                <Star /><Star /><Star /><Star /><Star />
+              </div>
+              <p>„{item.text}“</p>
+              <div className="testimonial-author">— {item.author}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="section section-cream contact-section">
+        <div className="wrapper contact-grid">
           <div>
-            <div className="section-kicker dark-kicker">Kontakt</div>
-            <h2 className="section-title left serif-dark">Domluvme váš termín</h2>
-            <p className="about-text">
+            <p className="eyebrow dark">Kontakt</p>
+            <h2>Domluvme váš termín</h2>
+            <p className="section-copy left-copy">
               Lifestyle & business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.
             </p>
           </div>
-          <div className="contact-panel luxury-contact-panel">
-            <div className="contact-mini-grid">
-              <div className="mini-card white-card">
-                <div className="mini-icon text-emerald"><IconMail /></div>
-                <div className="mini-kicker">E-mail</div>
-                <div className="mini-value">katkawei@gmail.com</div>
-              </div>
-              <div className="mini-card white-card">
-                <div className="mini-icon text-orange"><IconPhone /></div>
-                <div className="mini-kicker">Telefon</div>
-                <div className="mini-value">+420 603 155 635</div>
-              </div>
-            </div>
-            <button className="btn-pill btn-dark full-width-btn">
+
+          <div className="contact-card">
+            <p><strong>E-mail:</strong> katkawei@gmail.com</p>
+            <p><strong>Telefon:</strong> +420 603 155 635</p>
+            <p><strong>Lokalita:</strong> Praha</p>
+            <a href="#home" className="btn btn-dark full-btn">
               Napsat zprávu
-              <IconArrowRight />
-            </button>
+              <ArrowRight />
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="wrapper footer-row">
         <div>© 2026 La Ria Portraits</div>
-        <div>Luxusnější koncept • méně růžové • více kontrastu</div>
+        <div>La Ria Portraits | Praha</div>
       </footer>
     </main>
   );
