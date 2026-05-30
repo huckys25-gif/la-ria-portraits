@@ -4,18 +4,21 @@ const portfolioItems = [
     subtitle: "Přirozené momenty plné světla a blízkosti.",
     image: "/images/family.jpg",
     tone: "tone-sage",
+    chip: "chip-sage",
   },
   {
     title: "Svatby",
-    subtitle: "Elegantní reportáž z vašeho dne bez přehnané stylizace.",
+    subtitle: "Nádherné svatební dny.",
     image: "/images/wedding.jpg",
     tone: "tone-terra",
+    chip: "chip-terra",
   },
   {
     title: "Dětské focení",
-    subtitle: "Jemné, hravé a živé fotky s přirozenou atmosférou.",
+    subtitle: "Hravé a jemné momenty.",
     image: "/images/kids.jpg",
     tone: "tone-sand",
+    chip: "chip-sand",
   },
 ];
 
@@ -23,37 +26,28 @@ const pricing = [
   {
     name: "Mini",
     price: "2 900 Kč",
-    features: ["30 minut focení", "10 upravených fotografií", "Online galerie"],
-    accent: "accent-sage",
+    features: ["30 minut • focení", "10 upravených fotografií"],
+    tone: "price-sage",
   },
   {
     name: "Standard",
     price: "4 900 Kč",
-    features: ["60 minut focení", "30 upravených fotografií", "Online galerie + tisk"],
-    accent: "accent-terra",
+    features: ["60 minut • 30 fotek", "Online galerie + tisk"],
+    tone: "price-terra",
     featured: true,
   },
   {
     name: "Premium",
     price: "7 900 Kč",
-    features: ["90 minut focení", "60 upravených fotografií", "Fotokniha + online galerie"],
-    accent: "accent-dark",
+    features: ["90 minut • 60 fotek", "Fotokniha • online galerie"],
+    tone: "price-dark",
   },
 ];
 
 const testimonials = [
-  {
-    text: "Nádherné, přirozené fotky a úplně pohodová atmosféra během focení.",
-    author: "Jana a Tomáš",
-  },
-  {
-    text: "Skvělé vedení, krásné světlo a fotky, ke kterým se pořád vracíme.",
-    author: "Klára",
-  },
-  {
-    text: "Web i styl focení působí moderně, čistě a ne přeslazeně.",
-    author: "Petra",
-  },
+  "Skvělé, přirozené fotky, moc příjemné focení.",
+  "Reportáž ze svatby plná emocí.",
+  "Skvělý přístup a krásné snímky.",
 ];
 
 function ArrowRight() {
@@ -64,189 +58,131 @@ function ArrowRight() {
   );
 }
 
-function Star() {
-  return (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="icon-sm fill-current" aria-hidden="true">
-      <path d="M10 1.9L12.5 7L18 7.8L14 11.7L15 17.1L10 14.4L5 17.1L6 11.7L2 7.8L7.5 7L10 1.9Z" />
-    </svg>
-  );
-}
-
 export default function Page() {
   return (
     <main className="site-shell">
       <header className="topbar">
-        <div className="wrapper topbar-inner">
-          <a href="#home" className="brand-block" aria-label="La Ria Portraits - Domů">
+        <div className="shell topbar-inner">
+          <a href="#home" className="brand" aria-label="La Ria Portraits - Domů">
             <img src="/logo.png" alt="La Ria Portraits" className="brand-logo" />
           </a>
 
           <nav className="topnav" aria-label="Hlavní navigace">
-            <a href="#home">Domů</a>
+            <a href="#home" className="active">Domů</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#about">O mně</a>
             <a href="#pricing">Ceník</a>
+            <a href="#about">O mně</a>
             <a href="#contact">Kontakt</a>
           </nav>
 
-          <a href="#contact" className="topbar-cta">
-            Rezervovat termín
-          </a>
+          <a href="#contact" className="header-cta">Rezervovat termín</a>
         </div>
       </header>
 
-      <section id="home" className="hero">
-        <div className="wrapper hero-grid">
-          <div className="hero-copy-panel">
-            <p className="eyebrow">La Ria Portraits | Praha</p>
-            <h1>Lifestyle & business focení pro jednotlivce i firmy v Praze.</h1>
-            <p className="hero-copy">
-              Moderní, čistý a elegantní web pro fotografku, která chce působit prémiově,
-              ale stále lidsky a přirozeně. Méně růžové, více harmonie, černé a teplých neutrálních tónů.
-            </p>
-
+      <section id="home" className="hero-band">
+        <div className="shell hero-grid">
+          <div className="hero-copy">
+            <h1>La Ria Portraits | Praha</h1>
+            <h2>Lifestyle &amp; business focení<br />pro jednotlivce i firmy v Praze.</h2>
+            <p>Rezervujte si termín online.</p>
             <div className="hero-actions">
-              <a href="#portfolio" className="btn btn-primary">
-                Prohlédnout portfolio
-                <ArrowRight />
-              </a>
-              <a href="#pricing" className="btn btn-secondary">
-                Zobrazit ceník
-              </a>
+              <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
+              <a href="#pricing" className="btn btn-outline-darklight">Zjistit více <ArrowRight /></a>
             </div>
           </div>
 
-          <div className="hero-image-panel">
-            <img src="/images/hero-main.jpg" alt="Hlavní portfolio fotografie" className="hero-image" />
-            <div className="hero-note">
-              <span className="hero-note-kicker">Rezervujte si termín online.</span>
-              <span className="hero-note-text">Soft luxury editorial</span>
-            </div>
+          <div className="hero-image-wrap">
+            <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image" />
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="section section-cream">
-        <div className="wrapper section-head">
-          <p className="eyebrow dark">Portfolio</p>
-          <h2>Citlivé portréty, přirozené rodiny a čistý vizuální styl.</h2>
-          <p className="section-copy">
-            Tato homepage je postavená jako jeden elegantní celek. Fotografie jsou hlavním nosičem dojmu,
-            design je podporuje a nepřebíjí.
-          </p>
-        </div>
-
-        <div className="wrapper portfolio-grid">
+      <section id="portfolio" className="content-section cream-bg">
+        <div className="shell portfolio-grid">
           {portfolioItems.map((item) => (
             <article key={item.title} className={`portfolio-card ${item.tone}`}>
-              <div className="portfolio-image-wrap">
-                <img src={item.image} alt={item.title} className="portfolio-image" />
+              <div className="portfolio-head">{item.title}</div>
+              <div className="portfolio-image-wrap-card">
+                <img src={item.image} alt={item.title} className="portfolio-image-card" />
               </div>
-              <div className="portfolio-card-content">
-                <h3>{item.title}</h3>
-                <p>{item.subtitle}</p>
-              </div>
+              <div className="portfolio-subtitle">{item.subtitle}</div>
+              <div className={`portfolio-chip ${item.chip}`}>{item.title === 'Svatby' ? 'Nádherné svatební dny' : item.title === 'Dětské focení' ? 'Jiskřivé chvíle' : 'Přirozené focení'}</div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="about" className="section section-white">
-        <div className="wrapper about-grid">
+      <section id="pricing" className="content-section ivory-bg pricing-section">
+        <div className="shell">
+          <div className="section-title-row">
+            <h3>Balíčky focení</h3>
+          </div>
+          <div className="pricing-grid">
+            {pricing.map((item) => (
+              <article key={item.name} className={`pricing-card ${item.tone}`}>
+                {item.featured && <div className="featured-label">Nejoblíbenější volba</div>}
+                <div className="pricing-name">{item.name}</div>
+                <div className="pricing-price">{item.price}</div>
+                <ul>
+                  {item.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+                <a href="#contact" className="pricing-btn">Vybrat balíček</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="content-section cream-bg testimonials-section">
+        <div className="shell">
+          <div className="section-title-row">
+            <h3>Co říkají klienti</h3>
+          </div>
+          <div className="testimonials-grid">
+            {testimonials.map((text) => (
+              <article key={text} className="testimonial-item">
+                <p>“{text}”</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="content-section white-bg about-section">
+        <div className="shell about-grid">
           <div className="about-copy">
-            <p className="eyebrow dark">O mně</p>
-            <h2>Elegantní styl bez přeslazenosti.</h2>
+            <p className="about-kicker">O mně</p>
+            <h3>Elegantní styl a přirozené vedení během focení.</h3>
             <p>
-              Web působí luxusněji díky lepší rovnováze mezi tmavou horní částí a teplým světlým základem.
-              Fotografie zůstávají v centru pozornosti a sekce na sebe navazují přirozeněji.
-            </p>
-            <p>
-              Tenhle koncept je připravený pro reálné portfolio manželky a lze ho dál jednoduše doplnit
-              o konkrétní texty, ceník nebo propojení na rezervace.
+              La Ria Portraits je postavené jako moderní portfolio fotografky, které je přehledné,
+              luxusní a stále lidské. Web je navržen tak, aby nechal vyniknout fotografie a nepůsobil přeslazeně.
             </p>
           </div>
-
           <div className="about-images">
-            <div className="about-card about-card-main">
-              <img src="/images/about-1.jpg" alt="Ukázka fotografie 1" />
-            </div>
-            <div className="about-card about-card-offset">
-              <img src="/images/about-2.jpg" alt="Ukázka fotografie 2" />
-            </div>
+            <img src="/images/about-1.jpg" alt="Ukázka focení 1" />
+            <img src="/images/about-2.jpg" alt="Ukázka focení 2" />
           </div>
         </div>
       </section>
 
-      <section id="pricing" className="section section-ivory">
-        <div className="wrapper section-head">
-          <p className="eyebrow dark">Ceník</p>
-          <h2>Balíčky focení</h2>
-        </div>
-
-        <div className="wrapper pricing-grid">
-          {pricing.map((item) => (
-            <article key={item.name} className={`pricing-card ${item.accent} ${item.featured ? "featured-card" : ""}`}>
-              {item.featured && <div className="featured-badge">Nejoblíbenější volba</div>}
-              <h3>{item.name}</h3>
-              <div className="price">{item.price}</div>
-              <ul>
-                {item.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-              <a href="#contact" className="price-btn">
-                Vybrat balíček
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section section-white testimonials-section">
-        <div className="wrapper section-head align-left">
-          <p className="eyebrow dark">Reference</p>
-          <h2>Co říkají klienti</h2>
-        </div>
-
-        <div className="wrapper testimonials-grid">
-          {testimonials.map((item) => (
-            <article key={item.author} className="testimonial-card">
-              <div className="stars-row">
-                <Star /><Star /><Star /><Star /><Star />
-              </div>
-              <p>„{item.text}“</p>
-              <div className="testimonial-author">— {item.author}</div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="section section-cream contact-section">
-        <div className="wrapper contact-grid">
+      <section id="contact" className="content-section ivory-bg contact-section">
+        <div className="shell contact-grid">
           <div>
-            <p className="eyebrow dark">Kontakt</p>
-            <h2>Domluvme váš termín</h2>
-            <p className="section-copy left-copy">
-              Lifestyle & business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.
-            </p>
+            <div className="section-title-row left-row">
+              <h3>Kontakt</h3>
+            </div>
+            <p className="contact-copy">Lifestyle &amp; business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.</p>
           </div>
-
           <div className="contact-card">
             <p><strong>E-mail:</strong> katkawei@gmail.com</p>
             <p><strong>Telefon:</strong> +420 603 155 635</p>
             <p><strong>Lokalita:</strong> Praha</p>
-            <a href="#home" className="btn btn-dark full-btn">
-              Napsat zprávu
-              <ArrowRight />
-            </a>
+            <a href="#home" className="btn btn-dark full-width">Napsat zprávu <ArrowRight /></a>
           </div>
         </div>
       </section>
-
-      <footer className="wrapper footer-row">
-        <div>© 2026 La Ria Portraits</div>
-        <div>La Ria Portraits | Praha</div>
-      </footer>
     </main>
   );
 }
