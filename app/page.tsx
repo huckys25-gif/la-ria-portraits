@@ -17,8 +17,8 @@ const portfolioItems = [
     title: "Dětské focení",
     subtitle: "Jemné, hravé a živé fotky s přirozenou atmosférou.",
     image: "/images/kids.jpg",
-    bg: "card-gradient card-gradient-sky",
-    accent: "accent-sky",
+    bg: "card-gradient card-gradient-sand",
+    accent: "accent-sand",
   },
 ];
 
@@ -42,8 +42,8 @@ const pricing = [
     name: "Premium",
     price: "7 900 Kč",
     features: ["90 minut focení", "60 upravených fotografií", "Fotokniha + online galerie"],
-    border: "border-sky",
-    button: "btn-sky",
+    border: "border-slate",
+    button: "btn-dark",
   },
 ];
 
@@ -65,7 +65,7 @@ const testimonials = [
 const palette = [
   { hex: "#A9C5B3", label: "Šalvějová" },
   { hex: "#D39B72", label: "Terakota" },
-  { hex: "#B8D4E3", label: "Modrá mlha" },
+  { hex: "#111111", label: "Černá" },
   { hex: "#F9F4EC", label: "Krémová" },
 ];
 
@@ -140,25 +140,25 @@ export default function Page() {
     <main className="site-shell">
       <div className="bg-orb orb-emerald" />
       <div className="bg-orb orb-orange" />
-      <div className="bg-orb orb-sky" />
+      <div className="bg-orb orb-slate" />
 
       <header className="topbar">
         <div className="wrapper topbar-inner">
           <div>
-            <div className="brand-name">Lucie Nováková</div>
-            <div className="brand-sub">Photography</div>
+            <div className="brand-name">La Ria</div>
+            <div className="brand-sub">Portraits • Praha</div>
           </div>
 
           <nav className="topnav">
-            <a href="#home" className="nav-emerald">Domů</a>
-            <a href="#portfolio" className="nav-orange">Portfolio</a>
-            <a href="#about" className="nav-sky">O mně</a>
-            <a href="#pricing" className="nav-emerald">Ceník</a>
-            <a href="#contact" className="nav-orange">Kontakt</a>
+            <a href="#home" className="nav-cream active-link">Domů</a>
+            <a href="#portfolio" className="nav-cream">Portfolio</a>
+            <a href="#about" className="nav-cream">O mně</a>
+            <a href="#pricing" className="nav-cream">Ceník</a>
+            <a href="#contact" className="nav-cream">Kontakt</a>
           </nav>
 
           <div className="topbar-actions">
-            <button className="btn-pill btn-dark desktop-only">Rezervovat termín</button>
+            <button className="btn-pill btn-outline-gold desktop-only">Rezervovat termín</button>
             <button className="icon-button mobile-only" aria-label="Menu">
               <IconMenu />
             </button>
@@ -168,36 +168,33 @@ export default function Page() {
 
       <section id="home" className="hero-section wrapper">
         <div className="hero-copy-col">
-          <div className="soft-badge">
-            <span className="text-orange"><IconSparkles /></span>
-            Barevnější • elegantní • méně růžové
+          <div className="soft-badge dark-badge">
+            <span className="text-gold"><IconSparkles /></span>
+            Lifestyle & business focení pro jednotlivce i firmy v Praze
           </div>
 
-          <h1 className="hero-title">
-            Moderní foto web,
-            <span className="text-emerald">který je živější</span>
-            <span> a pořád elegantní.</span>
+          <h1 className="hero-title dark-title">
+            Moderní fotografie
+            <span className="text-cream">s radostí a elegancí</span>
           </h1>
 
-          <p className="hero-text">
-            Tohle je jednoduchá verze homepage bez externích knihoven. Styl kombinuje
-            šalvějovou zelenou, teplou terakotu, jemnou modrou a dostatek prostoru, aby web
-            nepůsobil sladce ani přeplácaně.
+          <p className="hero-text dark-text">
+            Pestřejší vizuální styl, více černé a bílé, luxusnější kontrast a stále jemné
+            přírodní akcenty. Přehledný web, který působí prémiově a přitom lidsky.
           </p>
 
           <div className="hero-actions">
-            <a href="#portfolio" className="btn-pill btn-emerald">
+            <a href="#portfolio" className="btn-pill btn-outline-light">
               Prohlédnout portfolio
-              <IconArrowRight />
             </a>
-            <a href="#pricing" className="btn-pill btn-light">
-              Zobrazit ceník
+            <a href="#pricing" className="btn-pill btn-transparent-light">
+              Zjistit více
             </a>
           </div>
 
           <div className="palette-row">
             {palette.map((color) => (
-              <div key={color.hex} className="palette-chip">
+              <div key={color.hex} className="palette-chip dark-chip">
                 <span className="palette-dot" style={{ backgroundColor: color.hex }} />
                 <span>{color.label}</span>
               </div>
@@ -206,91 +203,42 @@ export default function Page() {
         </div>
 
         <div className="hero-visual-col">
-          <div className="hero-glow" />
-          <div className="hero-card">
+          <div className="hero-card luxury-card">
             <img src="/images/hero-main.jpg" alt="Hlavní fotografie" className="hero-main-image" />
-            <div className="hero-overlay" />
-            <div className="hero-floating-note">
-              <div className="floating-kicker">Nový vizuální směr</div>
-              <div className="floating-title">Editorial elegance s živější barvou</div>
-              <p>
-                Méně růžové, více přírodních odstínů a jemných efektů v hoveru.
-              </p>
+            <div className="hero-floating-note light-note">
+              <div className="floating-kicker dark-kicker">La Ria Portraits | Praha</div>
+              <div className="floating-title dark-floating-title">Lifestyle & business focení</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="section wrapper centered-section">
-        <div className="section-kicker">Portfolio</div>
-        <h2 className="section-title">Hlavička, která působí luxusně, ale ne studeně</h2>
-        <p className="section-description">
-          Každý blok má vlastní jemný barevný akcent, takže web působí pestřeji a moderněji,
-          ale stále jednotně.
-        </p>
-
-        <div className="portfolio-grid">
+      <section id="portfolio" className="section wrapper centered-section bright-section">
+        <div className="portfolio-grid luxury-grid">
           {portfolioItems.map((item) => (
             <article key={item.title} className={item.bg}>
               <div className="portfolio-image-wrap">
                 <img src={item.image} alt={item.title} className="portfolio-image" />
               </div>
-              <div className="portfolio-content">
-                <span className={"accent-line " + item.accent} />
+              <div className="portfolio-content centered-card-text">
                 <h3>{item.title}</h3>
                 <p>{item.subtitle}</p>
-                <button className="btn-pill btn-light slim-btn">
-                  Zobrazit galerii
-                  <IconArrowRight />
-                </button>
+                <button className={"btn-pill dark-card-btn " + item.accent}>Zobrazit více</button>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="about" className="about-band">
-        <div className="wrapper about-grid">
-          <div>
-            <div className="section-kicker">O mně</div>
-            <h2 className="section-title left">Více charakteru, více vzduchu, žádná přeslazenost</h2>
-            <p className="about-text">
-              Tato verze funguje dobře pro rodinnou, dětskou i svatební fotografii. Barevnost je
-              živější než klasické neutrální weby, ale díky jemným tónům a whitespace zůstává prémiová.
-            </p>
-            <div className="features-grid">
-              {[
-                { label: "Jemné efekty", icon: <IconSparkles />, style: "feature-emerald" },
-                { label: "Zoom fotek", icon: <IconCamera />, style: "feature-orange" },
-                { label: "Barevné akcenty", icon: <IconHeart />, style: "feature-sky" },
-              ].map((item) => (
-                <div key={item.label} className={"feature-card " + item.style}>
-                  <div className="feature-icon">{item.icon}</div>
-                  <div className="feature-label">{item.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="tilt-gallery">
-            <div className="gallery-card card-left">
-              <img src="/images/about-1.jpg" alt="Ukázka fotografie 1" />
-            </div>
-            <div className="gallery-card card-right">
-              <img src="/images/about-2.jpg" alt="Ukázka fotografie 2" />
-            </div>
-          </div>
+      <section id="pricing" className="section wrapper pricing-white-section">
+        <div className="section-head-left">
+          <h2 className="section-title serif-dark">Balíčky focení</h2>
         </div>
-      </section>
 
-      <section id="pricing" className="section wrapper centered-section">
-        <div className="section-kicker">Ceník</div>
-        <h2 className="section-title">Přehledné balíčky bez chaosu</h2>
-
-        <div className="pricing-grid">
+        <div className="pricing-grid luxury-pricing-grid">
           {pricing.map((item) => (
-            <div key={item.name} className={"price-card " + item.border}>
-              {item.featured && <div className="featured-badge">Nejčastější volba</div>}
+            <div key={item.name} className={"price-card luxury-price-card " + item.border}>
+              {item.featured && <div className="featured-ribbon">Nejčastější volba</div>}
               <h3>{item.name}</h3>
               <div className="price">{item.price}</div>
               <ul>
@@ -307,48 +255,72 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section wrapper centered-section testimonials-section">
-        <div className="section-kicker">Recenze</div>
-        <h2 className="section-title">Co ten styl komunikuje</h2>
-
-        <div className="testimonials-grid">
+      <section className="section wrapper testimonials-clean">
+        <h2 className="section-title serif-dark section-head-left">Co říkají klienti</h2>
+        <div className="testimonials-grid clean-testimonials">
           {testimonials.map((item) => (
-            <div key={item.author} className="testimonial-card">
-              <div className="stars-row">
-                <IconStar />
-                <IconStar />
-                <IconStar />
-                <IconStar />
-                <IconStar />
-              </div>
-              <p>“{item.text}”</p>
+            <div key={item.author} className="testimonial-simple">
+              <p>„{item.text}“</p>
               <div className="author">— {item.author}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="contact" className="contact-strip">
+      <section id="about" className="about-band luxury-about-band">
+        <div className="wrapper about-grid">
+          <div>
+            <div className="section-kicker dark-kicker">O mně</div>
+            <h2 className="section-title left serif-dark">Více černé, více bílé, stále jemný charakter</h2>
+            <p className="about-text">
+              Tento směr je luxusnější, čistší a výraznější. Funguje skvěle pro fotografku, která
+              nechce působit přeslazeně, ale pořád chce mít web živý, příjemný a lidský.
+            </p>
+            <div className="features-grid">
+              {[
+                { label: "Jemné efekty", icon: <IconSparkles />, style: "feature-emerald" },
+                { label: "Luxusní kontrast", icon: <IconCamera />, style: "feature-orange" },
+                { label: "Přehlednost", icon: <IconHeart />, style: "feature-slate" },
+              ].map((item) => (
+                <div key={item.label} className={"feature-card " + item.style}>
+                  <div className="feature-icon">{item.icon}</div>
+                  <div className="feature-label">{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="tilt-gallery less-tilt-gallery">
+            <div className="gallery-card card-left">
+              <img src="/images/about-1.jpg" alt="Ukázka fotografie 1" />
+            </div>
+            <div className="gallery-card card-right small-tilt">
+              <img src="/images/about-2.jpg" alt="Ukázka fotografie 2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="contact-strip luxury-contact-strip">
         <div className="wrapper contact-strip-grid">
           <div>
-            <div className="section-kicker">Kontakt</div>
-            <h2 className="section-title left">Teď už to stačí nasadit na GitHub a Vercel</h2>
+            <div className="section-kicker dark-kicker">Kontakt</div>
+            <h2 className="section-title left serif-dark">Domluvme váš termín</h2>
             <p className="about-text">
-              Tento kód je připravený jako homepage pro Next.js. Stačí nahradit obrázky vlastními,
-              upravit texty a pushnout do repozitáře.
+              Lifestyle & business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.
             </p>
           </div>
-          <div className="contact-panel">
+          <div className="contact-panel luxury-contact-panel">
             <div className="contact-mini-grid">
-              <div className="mini-card">
+              <div className="mini-card white-card">
                 <div className="mini-icon text-emerald"><IconMail /></div>
                 <div className="mini-kicker">E-mail</div>
-                <div className="mini-value">lucie@fotoatelier.cz</div>
+                <div className="mini-value">katkawei@gmail.com</div>
               </div>
-              <div className="mini-card">
+              <div className="mini-card white-card">
                 <div className="mini-icon text-orange"><IconPhone /></div>
                 <div className="mini-kicker">Telefon</div>
-                <div className="mini-value">+420 123 456 789</div>
+                <div className="mini-value">+420 603 155 635</div>
               </div>
             </div>
             <button className="btn-pill btn-dark full-width-btn">
@@ -360,8 +332,8 @@ export default function Page() {
       </section>
 
       <footer className="wrapper footer-row">
-        <div>© 2026 Lucie Nováková Photography</div>
-        <div>Next.js • verze bez externích knihoven</div>
+        <div>© 2026 La Ria Portraits</div>
+        <div>Luxusnější koncept • méně růžové • více kontrastu</div>
       </footer>
     </main>
   );

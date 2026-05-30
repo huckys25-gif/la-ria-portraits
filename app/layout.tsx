@@ -1,8 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "La Ria Portraits",
-  description: "Moderní foto web – pestřejší, elegantní a méně růžový.",
+  title: "La Ria Portraits | Praha",
+  description:
+    "Lifestyle & business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.",
 };
 
 export default function RootLayout({
