@@ -7,12 +7,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #111111;
   background: #ffffff;
-}
-
-body {
-  line-height: 1.5;
+  color: #111111;
 }
 
 a {
@@ -21,63 +17,6 @@ a {
 }
 
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* HEADER */
-
-.site-header {
-  border-bottom: 1px solid #eaeaea;
-  background: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 18px 0;
-}
-
-.logo-link {
-  display: inline-flex;
-  align-items: center;
-}
-
-.logo {
-  height: 72px;
-  width: auto;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  opacity: 0.7;
-}
-
-/* HERO */
-
-.hero {
-  padding: 64px 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 48px;
