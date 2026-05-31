@@ -21,7 +21,7 @@ const pricingLifestyle = [
   {
     name: "Ría",
     price: "2 290 Kč",
-    text: "Zachyťte kouzlo okamžiku. 10 autorsky upravených snímků, za 1 hodinu, které uchovají Vaši přirozenou energii, ať už dorazíte sami, v páru, nebo se svým čtyřnohým parťákem.",
+    text: "Zachyťte kouzlo okamžiku. 10 autorsky upravených snímků za 1 hodinu, které uchovají Vaši přirozenou energii.",
     details: [
       "10 autorsky upravených snímků",
       "1 hodina focení",
@@ -32,7 +32,7 @@ const pricingLifestyle = [
   {
     name: "Antalia",
     price: "3 790 Kč",
-    text: "Váš příběh prožitý naplno. Rozšířený 2hodinový balíček pro rodiny, páry i jednotlivce, kteří chtějí víc prostoru pro společné momenty, změnu outfitů nebo střídání lokací. Výsledkem je pestrá kolekce 20 snímků, která ukáže Vaše pouto a radost z různých úhlů.",
+    text: "Rozšířený 2hodinový balíček s větším prostorem pro společné momenty, více lokací a pestřejší výsledek.",
     details: [
       "20 snímků",
       "2 hodiny focení",
@@ -44,7 +44,7 @@ const pricingLifestyle = [
   {
     name: "Spectrum",
     price: "6 500 Kč",
-    text: "Exkluzivní fotografický zážitek. Čtyři hodiny plné kreativní svobody, kdy máme čas na velké rodinné příběhy, rande na několika místech v Praze nebo proměnu Vašeho osobního stylu. Komplexní prémiová kolekce 35 snímků.",
+    text: "Exkluzivní fotografický zážitek s časem na velké příběhy, více míst v Praze nebo proměnu osobního stylu.",
     details: [
       "35 snímků",
       "Až 4 hodiny focení",
@@ -58,7 +58,7 @@ const pricingBusiness = [
   {
     name: "Profil",
     price: "2 990 Kč",
-    text: "Váš profi start. 10 snímků zaměřených na moderní image a důvěryhodnost. Ideální pro rychlý a kvalitní update Vašich profesních sítí (LinkedIn, web), který Vás odliší od šedého průměru.",
+    text: "Moderní image a důvěryhodnost. Ideální pro LinkedIn, web a profesní sítě.",
     details: [
       "10 snímků",
       "Moderní image a důvěryhodnost",
@@ -69,7 +69,7 @@ const pricingBusiness = [
   {
     name: "Brand",
     price: "5 490 Kč",
-    text: "Tvář Vaší značky. Vytvořím pestrou vizuální banku 20 snímků během 2 hodin pro Váš web a sítě, která ukáže Vaši expertizu, lidskost a styl při práci.",
+    text: "Pestrá vizuální banka pro web a sítě, která ukáže expertizu, lidskost i styl při práci.",
     details: [
       "20 snímků během 2 hodin",
       "Vizuální banka pro web a sítě",
@@ -81,7 +81,7 @@ const pricingBusiness = [
   {
     name: "Executive",
     price: "7 900 Kč",
-    text: "Konference, semináře a firemní večírky. Kompletní reportážní focení Vaší akce (v rozsahu do 4 hodin). Zachytím klíčové momenty, atmosféru, řečníky i networking. Výsledkem je ucelený report (cca 80–120 upravených snímků) pro Vaše PR a sociální sítě.",
+    text: "Kompletní reportážní focení akce, konference nebo semináře s uceleným výstupem pro PR a sítě.",
     details: [
       "Kompletní reportážní focení akce do 4 hodin",
       "Cca 80–120 upravených snímků",
@@ -133,41 +133,46 @@ function PriceCard({ item }: { item: { name: string; price: string; details: str
 export default function Page() {
   return (
     <main className="site-shell">
-      <header className="topbar">
-        <div className="shell topbar-inner">
-          <a href="#home" className="brand" aria-label="La Ria Portraits - domů">
-            <img src="/logo.png" alt="La Ria Portraits" className="brand-logo" />
-          </a>
+      <section id="home" className="hero-shell">
+        <div className="hero-top-space" />
 
-          <nav className="topnav" aria-label="Hlavní navigace">
-            <a href="#home" className="active">Domů</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#pricing">Ceník</a>
-            <a href="#about">O mně</a>
-            <a href="#contact">Kontakt</a>
-          </nav>
+        <div className="hero-header-row">
+          <div className="shell hero-header-inner">
+            <a href="#home" className="brand" aria-label="La Ria Portraits - domů">
+              <img src="/logo.png" alt="La Ria Portraits" className="brand-logo" />
+            </a>
 
-          <a href="#contact" className="header-cta">Nezávazně poptat termín</a>
-        </div>
-      </header>
+            <nav className="topnav" aria-label="Hlavní navigace">
+              <a href="#home" className="active">Domů</a>
+              <a href="#portfolio">Portfolio</a>
+              <a href="#pricing">Ceník</a>
+              <a href="#about">O mně</a>
+              <a href="#contact">Kontakt</a>
+            </nav>
 
-      <section id="home" className="hero-band">
-        <div className="smoke-layer smoke-a" />
-        <div className="smoke-layer smoke-b" />
-        <div className="smoke-layer smoke-c" />
-
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <p className="hero-kicker">Lifestyle &amp; business focení pro jednotlivce i firmy v Praze.</p>
-            <p className="hero-subcopy">Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
-            <div className="hero-actions">
-              <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
-              <a href="#contact" className="btn btn-outline-darklight">Domluvit focení <ArrowRight /></a>
-            </div>
+            <a href="#contact" className="header-cta">Nezávazně poptat termín</a>
           </div>
+        </div>
 
-          <div className="hero-image-wrap">
-            <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image cutout-look" />
+        <div className="hero-band">
+          <div className="smoke-layer smoke-a" />
+          <div className="smoke-layer smoke-b" />
+          <div className="smoke-layer smoke-c" />
+
+          <div className="shell hero-grid">
+            <div className="hero-copy">
+              <h1>La Ria Portraits | Praha</h1>
+              <h2>Lifestyle &amp; business focení<br />pro jednotlivce i firmy v Praze.</h2>
+              <p>Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
+              <div className="hero-actions">
+                <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
+                <a href="#contact" className="btn btn-outline-darklight">Domluvit focení <ArrowRight /></a>
+              </div>
+            </div>
+
+            <div className="hero-image-wrap">
+              <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image cutout-look" />
+            </div>
           </div>
         </div>
       </section>
