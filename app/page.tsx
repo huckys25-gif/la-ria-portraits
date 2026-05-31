@@ -1,3 +1,4 @@
+
 const portfolioSections = [
   {
     title: "Lifestyle",
@@ -133,52 +134,19 @@ function PriceCard({ item }: { item: { name: string; price: string; details: str
 export default function Page() {
   return (
     <main className="site-shell">
-      <section id="home" className="hero-shell">
-        <div className="hero-top-space" />
-
-        <div className="hero-header-row">
-          <div className="shell hero-header-inner">
-            <a href="#home" className="brand-text" aria-label="La Ria Portraits - domů">
-              <span className="brand-script">La Ria</span>
-              <span className="brand-smallcaps">PORTRAITS</span>
-            </a>
-
-            <nav className="topnav" aria-label="Hlavní navigace">
-              <a href="#home" className="active">Domů</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#pricing">Ceník</a>
-              <a href="#about">O mně</a>
-              <a href="#contact">Kontakt</a>
-            </nav>
-
-            <a href="#contact" className="header-cta">Nezávazně poptat termín</a>
-          </div>
-        </div>
-
-        <div className="hero-band">
-          <div className="smoke-layer smoke-a" />
-          <div className="smoke-layer smoke-b" />
-          <div className="smoke-layer smoke-c" />
-
-          <div className="shell hero-grid">
-            <div className="hero-copy">
-              <h1>La Ria Portraits | Praha</h1>
-              <h2>Lifestyle &amp; business focení<br />pro jednotlivce i firmy v Praze.</h2>
-              <p>Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
-              <div className="hero-actions">
-                <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
-                <a href="#contact" className="btn btn-outline-darklight">Domluvit focení <ArrowRight /></a>
-              </div>
-            </div>
-
-            <div className="hero-image-wrap">
-              <img src="/images/hero-cutout.png" alt="Hlavní portrétní fotografie" className="hero-image cutout-look" />
-            </div>
-          </div>
-        </div>
+      <section id="home" className="hero-reference-section">
+        <h1 className="sr-only">La Ria Portraits | Praha</h1>
+        <p className="sr-only">
+          Lifestyle & business focení pro jednotlivce i firmy v Praze. Napište mi a společně najdeme vhodný termín.
+        </p>
+        <img
+          src="/images/hero-reference.png"
+          alt="Vizuální hero sekce La Ria Portraits"
+          className="hero-reference-image"
+        />
       </section>
 
-      <section id="portfolio" className="content-section cream-bg top-divider">
+      <section id="portfolio" className="content-section cream-bg">
         <div className="shell section-title-row">
           <h3>Co fotí</h3>
         </div>
