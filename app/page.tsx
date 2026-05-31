@@ -152,11 +152,14 @@ export default function Page() {
       </header>
 
       <section id="home" className="hero-band">
+        <div className="smoke-layer smoke-a" />
+        <div className="smoke-layer smoke-b" />
+        <div className="smoke-layer smoke-c" />
+
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <h1>La Ria Portraits | Praha</h1>
-            <h2>Lifestyle &amp; business focení<br />pro jednotlivce i firmy v Praze.</h2>
-            <p>Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
+            <p className="hero-kicker">Lifestyle &amp; business focení pro jednotlivce i firmy v Praze.</p>
+            <p className="hero-subcopy">Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
             <div className="hero-actions">
               <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
               <a href="#contact" className="btn btn-outline-darklight">Domluvit focení <ArrowRight /></a>
@@ -164,12 +167,12 @@ export default function Page() {
           </div>
 
           <div className="hero-image-wrap">
-            <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image" />
+            <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image cutout-look" />
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="content-section cream-bg">
+      <section id="portfolio" className="content-section cream-bg top-divider">
         <div className="shell section-title-row">
           <h3>Co fotí</h3>
         </div>
