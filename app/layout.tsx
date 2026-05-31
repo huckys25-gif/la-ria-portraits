@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "La Ria Portraits | Praha",
   description:
-    "Lifestyle & business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.",
+    "Lifestyle & business focení pro jednotlivce i firmy v Praze. Napište mi a společně najdeme vhodný termín.",
 };
 
 export default function RootLayout({

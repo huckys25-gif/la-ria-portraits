@@ -125,7 +125,7 @@ function PriceCard({ item }: { item: { name: string; price: string; details: str
           <li key={detail}>{detail}</li>
         ))}
       </ul>
-      <a href="#contact" className="pricing-btn">Rezervovat <ArrowRight /></a>
+      <a href="#contact" className="pricing-btn">Nezávazně poptat termín <ArrowRight /></a>
     </article>
   );
 }
@@ -147,7 +147,7 @@ export default function Page() {
             <a href="#contact">Kontakt</a>
           </nav>
 
-          <a href="#contact" className="header-cta">Rezervovat termín</a>
+          <a href="#contact" className="header-cta">Nezávazně poptat termín</a>
         </div>
       </header>
 
@@ -156,10 +156,10 @@ export default function Page() {
           <div className="hero-copy">
             <h1>La Ria Portraits | Praha</h1>
             <h2>Lifestyle &amp; business focení<br />pro jednotlivce i firmy v Praze.</h2>
-            <p>Rezervujte si termín online.</p>
+            <p>Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
             <div className="hero-actions">
               <a href="#portfolio" className="btn btn-outline-light">Prohlédnout portfolio</a>
-              <a href="#pricing" className="btn btn-outline-darklight">Zjistit více <ArrowRight /></a>
+              <a href="#contact" className="btn btn-outline-darklight">Domluvit focení <ArrowRight /></a>
             </div>
           </div>
 
@@ -256,13 +256,13 @@ export default function Page() {
             <div className="section-title-row left-row">
               <h3>Kontakt</h3>
             </div>
-            <p className="contact-copy">Lifestyle &amp; business focení pro jednotlivce i firmy v Praze. Rezervujte si termín online.</p>
+            <p className="contact-copy">Napište mi a společně najdeme termín, který vám bude vyhovovat.</p>
           </div>
           <div className="contact-card">
             <p><strong>E-mail:</strong> katkawei@gmail.com</p>
             <p><strong>Telefon:</strong> +420 603 155 635</p>
             <p><strong>Lokalita:</strong> Praha</p>
-            <a href="#home" className="btn btn-dark full-width">Napsat zprávu <ArrowRight /></a>
+            <a href="#home" className="btn btn-dark full-width">Kontaktovat mě <ArrowRight /></a>
           </div>
         </div>
       </section>
