@@ -172,7 +172,7 @@ export default function Page() {
             </div>
 
             <div className="hero-image-wrap">
-              <img src="/images/hero-main.jpg" alt="Hlavní portrétní fotografie" className="hero-image cutout-look" />
+              <img src="/images/hero-cutout.png
             </div>
           </div>
         </div>
