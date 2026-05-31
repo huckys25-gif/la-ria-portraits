@@ -28,14 +28,8 @@ svg { flex-shrink: 0; }
 .site-shell { min-height: 100vh; background: var(--bg); }
 .shell { max-width: 1180px; margin: 0 auto; padding: 0 1.2rem; }
 
-.hero-shell {
-  background: var(--black);
-  overflow: hidden;
-}
-.hero-top-space {
-  height: 108px;
-  background: var(--black);
-}
+.hero-shell { background: var(--black); overflow: hidden; }
+.hero-top-space { height: 108px; background: var(--black); }
 .hero-header-row {
   border-top: 1px solid rgba(255,255,255,0.10);
   border-bottom: 1px solid rgba(255,255,255,0.10);
@@ -49,8 +43,25 @@ svg { flex-shrink: 0; }
   gap: 1.2rem;
   min-height: 78px;
 }
-.brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 76px; width: auto; }
+.brand-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--gold);
+  line-height: 1;
+}
+.brand-script {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 3.4rem;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+.brand-smallcaps {
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.55em;
+}
 .topnav { display: flex; gap: 1.75rem; color: rgba(255,255,255,0.9); font-size: 0.95rem; }
 .topnav a { position: relative; padding-bottom: 0.2rem; }
 .topnav a.active::after,
@@ -77,9 +88,7 @@ svg { flex-shrink: 0; }
     radial-gradient(circle at 74% 46%, rgba(255,255,255,0.12) 0, rgba(255,255,255,0) 24%),
     linear-gradient(180deg, var(--black) 0%, var(--black-soft) 100%);
 }
-.smoke-layer {
-  position: absolute; inset: 0; pointer-events: none;
-}
+.smoke-layer { position: absolute; inset: 0; pointer-events: none; }
 .smoke-a {
   background:
     radial-gradient(ellipse at 9% 72%, rgba(255,255,255,0.16) 0 10%, rgba(255,255,255,0) 38%),
@@ -250,7 +259,7 @@ svg { flex-shrink: 0; }
   .topnav { display: none; }
   .header-cta { display: none; }
   .hero-header-inner { min-height: 74px; }
-  .brand-logo { height: 68px; }
+  .brand-script { font-size: 2.8rem; }
 }
 @media (max-width: 640px) {
   .shell { padding: 0 1rem; }
@@ -258,4 +267,6 @@ svg { flex-shrink: 0; }
   .btn, .pricing-btn, .full-width { width: 100%; }
   .hero-image { height: 280px; }
   .hero-top-space { height: 72px; }
+  .brand-script { font-size: 2.3rem; }
+  .brand-smallcaps { letter-spacing: 0.38em; }
 }

@@ -138,8 +138,9 @@ export default function Page() {
 
         <div className="hero-header-row">
           <div className="shell hero-header-inner">
-            <a href="#home" className="brand" aria-label="La Ria Portraits - domů">
-              <img src="/logo.png" alt="La Ria Portraits" className="brand-logo" />
+            <a href="#home" className="brand-text" aria-label="La Ria Portraits - domů">
+              <span className="brand-script">La Ria</span>
+              <span className="brand-smallcaps">PORTRAITS</span>
             </a>
 
             <nav className="topnav" aria-label="Hlavní navigace">
